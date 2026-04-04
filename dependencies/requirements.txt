@@ -1,0 +1,12 @@
+ipykernel
+langchain
+langchain-community
+langchain-core
+langchain-experimental
+langchain-openai
+langchain-text-splitters
+matplotlib
+numpy
+pandas
+polars
+seaborn

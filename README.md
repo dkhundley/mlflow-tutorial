@@ -7,7 +7,7 @@ Something to be aware of: I mentioned that MLflow was originally created by Data
 
 
 
-[!NOTE]
-This repository is currently a work in progress.
+> [!NOTE]
+> This repository is currently a work in progress.
 
 ## Traditional ML

@@ -179,3 +179,4 @@ terraform.tfstate
 .terraform/*
 */aws_files/*
 mlflow.db
+mlruns/

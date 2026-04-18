@@ -8,6 +8,6 @@ Something to be aware of: I mentioned that MLflow was originally created by Data
 
 
 > [!NOTE]
-> This repository is currently a work in progress.
+> This repository is currently a work in progress. I am currently making updates to it throughout April-May 2026. I will remove this note once I've soldified all the content!
 
 ## Traditional ML

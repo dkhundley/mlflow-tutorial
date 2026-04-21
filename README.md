@@ -10,3 +10,10 @@ Something to be aware of: I mentioned that MLflow was originally created by Data
 
 
 ## Traditional ML
+Things to add:
+- Experiments
+- Runs
+- Model Signature
+- Models
+- Model registration
+- Model serving

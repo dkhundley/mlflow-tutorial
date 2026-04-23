@@ -9,6 +9,16 @@ Something to be aware of: I mentioned that MLflow was originally created by Data
 
 
 
+## MLflow Architecture
+<p align="center">
+	<img src="/assets/mlflow-arch.png" alt="MLflow architecture" />
+	<br />
+	<em><a href="https://mlflow.org/docs/latest/self-hosting/architecture/overview/">Image taken from MLflow's website</a></em>
+</p>
+
+
+## MLflow Terms / Concepts
+
 ## Traditional ML
 Things to add:
 - Experiments

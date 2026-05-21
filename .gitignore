@@ -166,6 +166,7 @@ cython_debug/
 .venv/
 uv.lock
 .python-version
+.ruff_cache
 
 # Extra ignores added by @dkhundley
 .DS_Store

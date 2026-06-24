@@ -69,3 +69,8 @@ The MLflow artifact package generally consists of the following files:
 Once a model has been trained, it is possible to serve the model for inference directly from the tracking server. It makes use of the whole artifact package we covered in the section above to stand up an endpoint that can be called for inference use as a real-time API.
 
 In addition to serving a single model endpoint, it is possible to customize the endpoint using **pyfunc**. pyfunc is essentially a universal interface for interacting with MLflow models. More specifically, this is how one may apply pre- or post-processing logic, or a user can even serve multiple models behind the same endpoint this way.
+
+
+
+## GenAI
+Because MLflow as a whole predates the whole generative AI (GenAI) revolution, there naturally did not previously exist features that support GenAI. In recent years, MLflow has been enhanced to 

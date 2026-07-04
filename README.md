@@ -5,14 +5,15 @@ In this repository, we will be covering the ins and outs of **MLflow**. MLflow i
 Something to be aware of: I mentioned that MLflow was originally created by Databricks, and to this day, MLflow is a major part of the Databricks platform. This does not mean, however, that MLflow is exclusive to Databricks. Because MLflow itself is open source, we can leverage it on any infrastructure we please, including our own local laptops / desktops. For the purposes of this tutorial, we will not focus on anything with Databricks in particular. That said, much of this tutorial should still largely translate well if you're working directly on Databricks, but please be aware that there are some things that the Databricks implementation of MLflow does a little differently than the "pure" open source version.
 
 > [!NOTE]
-> This repository is currently a work in progress. I am currently making updates to it throughout April-May 2026. I will remove this note once I've soldified all the content!
+> This repository is currently a work in progress. I am currently making updates to it throughout April-July 2026. I will remove this note once I've soldified all the content!
 
 
 
 ## Accompanying Livestreams
-This tutorial is intended to accompany some livestreams I conducted across April and May 2026. You can catch each of the respective livestreams on YouTube at the links below:
+This tutorial is intended to accompany some livestreams I conducted across April to July 2026. You can catch each of the respective livestreams on YouTube at the links below:
 
 - **An Overview of MLflow for Traditional ML** ([Link](https://www.youtube.com/live/2OVU4DZLAvY?si=OiduwVFB46TR5nwL)): This stream introduces MLflow by covering the architecture and terms associated to MLflow in general and also covers all content associated to traditional ML.
+- **An Overview of MLflow for GenAI (Part 1)** ([Link](https://www.youtube.com/live/yqGsUOc8tbw?si=IfVN7FVthUMm5t1N)): This stream starts to introduce the GenAI aspects of MLflow, specifically focusing on the AI gateway and prompt registry.
 
 
 ## MLflow Architecture

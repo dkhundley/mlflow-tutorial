@@ -73,4 +73,21 @@ In addition to serving a single model endpoint, it is possible to customize the 
 
 
 ## GenAI
-Because MLflow as a whole predates the whole generative AI (GenAI) revolution, there naturally did not previously exist features that support GenAI. In recent years, MLflow has been enhanced to 
+Because MLflow as a whole predates the whole generative AI (GenAI) revolution, there naturally did not previously exist features that support GenAI. In recent years, MLflow has been enhanced to support GenAI. In this notebook, we'll touch on the core capabilities MLflow offers to support GenAI.
+
+### AI Gateway
+As the name implies, the AI Gateway is a single entrypoint for applications to get results from an LLM provider. Naturally, you configure this all yourself, and out of the box, MLflow supports a number of different model providers. All you need to do is supply your credentials to access that model provider, such as your API key.
+
+The AI gateway supports the following benefits:
+- **Guardrails**: You can configure your own guardrails to ensure that users aren't doing anything you wouldn't expect them to do. The guardrail functionality is supported by using a specific model serving endpoint that is different than the endpoint that the guardrail is applied to. In other words, the guardrail endpoint and typical model endpoint are different, so at a minimum, you will need to configure two different endpoints in your AI Gateway to leverage the guardrail functionality. You can then customizably apply how you would like these guardrails to work, including a pre- or post-LLM guardrail, blocking or sanitizating the inputs or outputs, and more.
+- **Automatic trace capture**: By default, any endpoint you manifest in the AI Gateway will automatically capture any traces as the endpoint is invoked.
+- **Usage information**: MLflow does its best to capture usage of each endpoint, capturing things like tokens used and cost of each invocation. This works pretty well for the larger model providers, but be careful as I don't believe that the cost capture is perfect since MLflow doesn't automatically check for any price changes. It will still get you pretty close to the real cost.
+- **Coding assistant telemetry capture**: Many people may be interested in capturing the telemetry of their favorite coding assistant, whether that be Claude Code or Codex. Fortunately, MLflow supports this out of the box and is relatively easy to set up. One note on Codex in particular: it can only capture the telemetry appropriately if you are using the API as the backend for Codex. If you use a ChatGPT subscription, you unfortunately won't be able to capture this Codex telemetry.
+
+### Prompt Registry
+The MLflow prompt registry allows users to manage their prompts in a central location. The prompt registry supports the following functionality:
+
+- **Versioning**: MLflow allows you to version your prompts and keeps a full history of all the prompts over time. It also supports things like annotating each version with a commit comment so you can understand why prompts have been changed over time.
+- **Model configuration**: In addition to capturing just the prompt itself, MLflow allows you to capture the ideal model configuration for the respective model. So if your prompt was designed to work ideally with Anthropic Sonnet 5 for example, you can capture that information appropriately alongside the prompt.
+- **Aliasing**: Because you can set the model configuration alongside the prompt, you may have different versions of a prompt that are all similar but designed to work ideally with different model types. You are able to capture all these prompts as part of the "same entry" and simply apply an alias to each as you want to reference them associated with a specific model.
+- **Auto re-write**: While not neceessarily a direct feature of the prompt registry, this functionality works very closely with the prompt registry. What this essentially allows you to do is to leverage MLflow functionality to provide sample outputs produced by one model and then automatically rewrite the prompt based on those sample outputs to form a more ideal prompt template. This rewritten prompt is then saved as a new version back to the prompt registry.
